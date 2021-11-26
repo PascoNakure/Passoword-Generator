@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="./app.js" defer></script>
+    </head>
+    <body
+        class="
+            bg-gray-200
+            flex flex-col
+            justify-center
+            items-center
+            mx-auto
+            h-screen
+        "
+    >
+        <div
+            class="
+                bg-pink-300
+                rounded-lg
+                text-gray-600
+                font-bold
+                flex flex-col
+                justify-center
+                items-center
+            "
+        >
+            <h1 class="text-3xl text-center py-4 border-pink-100 border-b">
+                Password Generator
+            </h1>
+            <h3
+                class="
+                    text-gray-600
+                    font-bold
+                    flex
+                    justify-center
+                    items-center
+                    p-4
+                    my-5
+                    bg-white
+                    rounded-sm
+                    w-80
+                    h-24
+                    break-all
+                "
+                data-password-generated
+            >
+                Password
+            </h3>
+            <form
+                class="
+                    flex flex-col
+                    justify-center
+                    px-3
+                    mx-auto
+                    text-gray-600 text-base
+                    font-normal
+                "
+                data-form
+            >
+                <div class="inline-flex items-center">
+                    <label for="range-number" class="w-3/5"
+                        >Number Of Characters</label
+                    >
+                    <input
+                        type="range"
+                        min="1"
+                        max="40"
+                        value="10"
+                        id="range-and-number"
+                        data-range
+                        class="w-20 cursor-pointer"
+                    />
+                    <input
+                        type="number"
+                        min="1"
+                        max="40"
+                        value="10"
+                        id="range-and-number"
+                        data-number
+                        class="
+                            text-gray-600
+                            border
+                            appearance-none
+                            font-semibold
+                            leading-tight
+                            focus:outline-none
+                            focus:bg-white
+                            focus:border-pink-400
+                        "
+                    />
+                </div>
+                <div class="inline-flex items-center">
+                    <label
+                        for="include-upercase"
+                        class="w-3/5 hover:text-gray-700"
+                        >Include Uppercase</label
+                    >
+                    <input
+                        type="checkbox"
+                        id="include-upercase"
+                        class="cursor-pointer"
+                    />
+                </div>
+
+                <div class="inline-flex items-center">
+                    <label
+                        for="include-number"
+                        class="w-3/5 hover:text-gray-700"
+                        >Include Numbers</label
+                    >
+                    <input
+                        type="checkbox"
+                        id="include-number"
+                        class="cursor-pointer"
+                    />
+                </div>
+
+                <div class="inline-flex items-center">
+                    <label
+                        for="include-symbols"
+                        class="w-3/5 hover:text-gray-700"
+                        >Include Symbols</label
+                    >
+                    <input
+                        type="checkbox"
+                        id="include-symbols"
+                        class="cursor-pointer"
+                    />
+                </div>
+
+                <button
+                    type="submit"
+                    class="
+                        cursor-pointer
+                        py-2
+                        px-3
+                        w-80
+                        my-6
+                        mx-auto
+                        rounded-full
+                        border-white border-2
+                        bg-transparent
+                        hover:bg-pink-400
+                        hover:text-white
+                        transform
+                        transition-all
+                        duration-200
+                        ease-in-out
+                    "
+                >
+                    Generate Password
+                </button>
+            </form>
+        </div>
+    </body>
+</html>
